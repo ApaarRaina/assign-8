@@ -22,8 +22,3 @@ This project analyzes the NYC Yellow Taxi dataset using PySpark on Databricks. I
 - Saved query result (`total_fare`) as JSON to DBFS
 - Flattened nested `window` field (start, end)
 - Saved flattened result as **external Parquet table**:
-```python
-flattened_df.write.format("parquet").mode("overwrite")
-  .option("path", "/FileStore/tables/final_total_fare_parquet")
-  .saveAsTable("external_total_fare_table")
-
